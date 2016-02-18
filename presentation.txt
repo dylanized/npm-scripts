@@ -43,6 +43,13 @@ by @dylanized
 
 
 
+
+
+
+
+
+
+
 baked-in
 
 
@@ -83,7 +90,6 @@ https://docs.npmjs.com/misc/scripts
 
 
 
-
 Nordic.js 2015 • Kate Hudson - Advanced front-end automation with npm scripts
 
 https://www.youtube.com/watch?v=0RYETb9YVrk
@@ -94,6 +100,13 @@ https://www.youtube.com/watch?v=0RYETb9YVrk
 How to Use NPM as a Build Tool
 
 http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
+
+
+
+
+Why NPM Scripts?
+
+https://css-tricks.com/why-npm-scripts/
 
 
 
