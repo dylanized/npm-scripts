@@ -1,0 +1,21 @@
+{
+  "name": "basic-scripts",
+  "version": "1.0.0",
+  "description": "NPM Script Basics",
+  "main": "server.js",
+  "author": "dylanized",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^2.4.4"
+  },
+  "scripts": {
+    "build": "cp package.json tmp",
+    "postinstall": "build",
+    "start": "node foo.js",
+    "test": "mocha test/*.js",
+    "clean": "rm tmp/*.*",
+    "pretest": "npm run clean && npm run build"
+  }
+}

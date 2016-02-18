@@ -198,13 +198,13 @@ test
 
 
 
-02  Build Basics
+02  Basic Build Systems
 
 
 {
-  "name": "build-basics",
-  "version": "0.0.1",
-  "description": "Build script basics",
+  "name": "basic-build-systems",
+  "version": "1.0.0",
+  "description": "Basic build systems",
   "main": "index.js",
   "author": "dylanized",
   "license": "MIT",
@@ -234,7 +234,7 @@ test
 
 
 
-03  Complex Builds
+03  Complex Build Systems
 
 
 
@@ -258,6 +258,15 @@ test
     "dev": "npm run reload && npm run build && npm run watch-start",
     "stop": "npm run stopDB && npm run stopSQL"
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -304,6 +313,16 @@ test
 
 
 
+
+
+
+
+
+
+
+
+
+
 05 Database Handling
 
 
@@ -330,6 +349,13 @@ test
     "startSQL": " ",
     "stopSQL": " ",
     "destroySQL": " "
+
+
+
+
+
+
+
 
 
 
@@ -385,6 +411,9 @@ test
 
 
 
+
+
+
 07 Testing
 
 
@@ -397,6 +426,10 @@ test
     "test-grep": "mocha --grep",
     "env": "env",
     "bin": "ls ./node_modules/.bin/",
+
+
+
+
 
 
 
