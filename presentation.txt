@@ -239,6 +239,9 @@ test
   "main": "index.js",
   "author": "dylanized",
   "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.4.4"
+  },  
   "scripts": {
     "build": "cp package.json tmp",
     "postinstall": "npm run build",
@@ -432,7 +435,6 @@ postrestart
     "pretest": "npm run clean && npm run build"
   }
 }
-
 
 
 
