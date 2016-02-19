@@ -47,6 +47,28 @@ by @dylanized
 
 
 
+NPM Scripts are so hot right now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,15 +190,20 @@ https://github.com/dylanized/npm-scripts
 
 
 
-01.5  Shortcuts
-
-
-
+Shortcuts
 
 start
 stop
 restart
 test
+
+
+
+
+
+
+
+
 
 
 
@@ -214,9 +241,190 @@ test
   "license": "MIT",
   "scripts": {
     "build": "cp package.json tmp",
+    "postinstall": "npm run build",
+    "start": "node foo.js",
+    "test": "mocha test/*.js",
+    "clean": "rm tmp/*.*",
+    "pretest": "npm run clean && npm run build",
+    "archive": "node scripts/archive.js"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+terminal commands
+
+OR
+
+bash scripts
+
+OR
+
+node executables
+
+OR
+
+Node scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pre/post hooks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"the npm lifecycle"
+
+install
+update
+version
+publish
+start
+stop
+restart
+test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+preinstall
+install
+postinstall
+
+preupdate
+update
+postupdate
+
+preversion
+version
+postversion
+
+prepublish
+publish
+postpublish
+
+pretest
+test
+posttest
+
+prestart
+start
+poststart
+
+prestop
+stop
+poststop
+
+prerestart
+restart
+postrestart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+02.5  Intermediate Build Systems
+
+
+{
+  "name": "basic-build-systems",
+  "version": "1.0.0",
+  "description": "Basic build systems",
+  "main": "index.js",
+  "author": "dylanized",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run compile && npm run move-assets",
     "compile": "npm compile-css && npm run compile-js",
     "compile-css": " ",
     "compile-js": " ",
+    "move-assets": "cp assets/*.* assets2",    
     "postinstall": "npm run build",
     "start": "node foo.js",
     "test": "mocha test/*.js",
@@ -224,6 +432,9 @@ test
     "pretest": "npm run clean && npm run build"
   }
 }
+
+
+
 
 
 
@@ -386,6 +597,7 @@ test
     "startDB": " ",
     "stopDB": " ",
     "destroyDB": " ",
+    
     "==DATABASE2==": " ",
     "createSQL": "echo \"create database $npm_package_config_sql_dbname\" | mysql -u $npm_package_config_sql_user -p$npm_package_config_sql_pass",
     "seedSQL": "mysql -u $npm_package_config_sql_user -p$npm_package_config_sql_pass $npm_package_config_sql_dbname < $npm_package_config_sql_seed",
@@ -396,6 +608,7 @@ test
     "startSQL": " ",
     "stopSQL": " ",
     "destroySQL": " ",
+    
     "==UNINSTALL==": " ",
     "uninstall": "npm-run-all destroyDB destroySQL clean",
     "clean": " ", 
