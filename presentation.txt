@@ -88,6 +88,8 @@ OFFICIAL DOCUMENTATION
 
 https://docs.npmjs.com/misc/scripts
 
+http://browsenpm.org/package.json
+
 
 
 Nordic.js 2015 • Kate Hudson - Advanced front-end automation with npm scripts
@@ -114,6 +116,8 @@ https://css-tricks.com/why-npm-scripts/
 The @dylanized App Boilerplate
 
 https://github.com/dylanized/app-boilerplate
+
+https://github.com/dylanized/npm-scripts
 
 
 
@@ -210,7 +214,10 @@ test
   "license": "MIT",
   "scripts": {
     "build": "cp package.json tmp",
-    "postinstall": "build",
+    "compile": "npm compile-css && npm run compile-js",
+    "compile-css": " ",
+    "compile-js": " ",
+    "postinstall": "npm run build",
     "start": "node foo.js",
     "test": "mocha test/*.js",
     "clean": "rm tmp/*.*",

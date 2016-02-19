@@ -1,0 +1,18 @@
+{
+  "name": "basic-scripts",
+  "version": "0.0.1",
+  "description": "Basic scripts example",
+  "author": "dylanized",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.4"
+  },  
+  "scripts": {
+    "stop": " ",
+    "test": "mocha test/*.js",
+    "clean": "rm tmp/*.*"
+  }
+}
